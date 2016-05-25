@@ -4,7 +4,7 @@
 
 (def db {})
 
-(future-fact "add-student"
+(fact "add-student"
       (grade-school/add db "Aimee" 2) => {2 ["Aimee"]})
 
 (future-fact "add-more-students-in-same-class"
