@@ -7,13 +7,13 @@
 (fact "add-student"
       (grade-school/add db "Aimee" 2) => {2 ["Aimee"]})
 
-(future-fact "add-more-students-in-same-class"
+(fact "add-more-students-in-same-class"
       (-> db
           (grade-school/add "James" 2)
           (grade-school/add "Blair" 2)
           (grade-school/add "Paul" 2)) => {2 ["James", "Blair", "Paul"]})
 
-(future-fact "add-students-to-different-grades"
+(fact "add-students-to-different-grades"
       (-> db
           (grade-school/add "Chelsea" 3)
           (grade-school/add "Logan" 7)) => {3 ["Chelsea"] 7 ["Logan"]})
