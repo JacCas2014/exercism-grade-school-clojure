@@ -18,14 +18,14 @@
           (grade-school/add "Chelsea" 3)
           (grade-school/add "Logan" 7)) => {3 ["Chelsea"] 7 ["Logan"]})
 
-(future-fact "get-students-in-a-grade"
+(fact "get-students-in-a-grade"
       (-> db
           (grade-school/add "Franklin" 5)
           (grade-school/add "Bradley" 5)
           (grade-school/add "Jeff" 1)
           (grade-school/grade 5)) => ["Franklin", "Bradley"])
 
-(future-fact "get-students-in-a-non-existant-grade"
+(fact "get-students-in-a-non-existant-grade"
       (grade-school/grade db 1) => [])
 
 (future-fact "sorted-grade-school"
