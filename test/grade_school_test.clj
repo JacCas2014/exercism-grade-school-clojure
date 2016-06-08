@@ -28,7 +28,7 @@
 (fact "get-students-in-a-non-existant-grade"
       (grade-school/grade db 1) => [])
 
-(future-fact "sorted-grade-school"
+(fact "sorted-grade-school"
       (-> db
           (grade-school/add "Jennifer" 4)
           (grade-school/add "Kareem" 6)
@@ -38,7 +38,7 @@
                                                 4 ["Christopher" "Jennifer"]
                                                 6 ["Kareem"]))
 
-(future-fact "sorted-grade_school-keys-sorted"
+(fact "sorted-grade_school-keys-sorted"
       (-> db
           (grade-school/add "Jennifer" 4)
           (grade-school/add "Kareem" 6)
